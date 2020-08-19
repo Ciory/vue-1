@@ -29,6 +29,7 @@ export function initGlobalAPI (Vue: GlobalAPI) {
       )
     }
   }
+  // 注册vue.config
   Object.defineProperty(Vue, 'config', configDef)
 
   // exposed util methods.
@@ -52,6 +53,7 @@ export function initGlobalAPI (Vue: GlobalAPI) {
   }
 
   Vue.options = Object.create(null)
+  // 注册组件 指令 过滤器
   ASSET_TYPES.forEach(type => {
     Vue.options[type + 's'] = Object.create(null)
   })
